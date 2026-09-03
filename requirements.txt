@@ -1,0 +1,12 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+streamlit>=1.37
+requests>=2.32
+PyMuPDF>=1.24
+sentence-transformers>=3.0
+qdrant-client>=1.10
+fastembed>=0.3
+google-genai>=1.0
+pytest>=8.0
+locust>=2.29
