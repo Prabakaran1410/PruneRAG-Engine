@@ -3,4 +3,5 @@ __pycache__/
 .pytest_cache/
 .streamlit/
 .env
+.resource
 qdrant_storage/
