@@ -36,7 +36,10 @@ class HybridRetriever:
         scored = []
         for index, chunk in enumerate(self.chunks):
             chunk_terms = _terms(chunk.text)
-            lexical = len(query_terms & chunk_terms) / max(1, len(query_terms))
+            overlap = len(query_terms & chunk_terms)
+            lexical = overlap / max(1, len(query_terms))
+            if overlap:
+                lexical = min(1.0, lexical + 0.15)
             dense = dense_scores[index] if dense_scores else 0.0
             hybrid = (0.55 * dense) + (0.45 * lexical) if dense_scores else lexical
             scored.append((hybrid, index, chunk))

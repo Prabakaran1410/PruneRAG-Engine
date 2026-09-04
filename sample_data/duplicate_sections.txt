@@ -1,0 +1,19 @@
+OPERATIONS HANDOFF NOTES | REDUNDANCY TEST
+
+Incident summary
+The payments queue reached 82% utilization at 14:20 UTC. The team increased worker capacity from 12 to 20 and queue utilization returned below 50% within 11 minutes.
+
+Incident summary duplicate
+The payments queue reached 82% utilization at 14:20 UTC. The team increased worker capacity from 12 to 20 and queue utilization returned below 50% within 11 minutes.
+
+Incident summary near duplicate
+At 14:20 UTC, payments queue utilization hit 82 percent. Worker capacity rose from twelve to twenty and utilization dropped under 50 percent after eleven minutes.
+
+Customer impact
+Twenty-seven checkout attempts were delayed, but no payments were lost. Customer support used the incident response macro PAY-QUEUE-DELAY.
+
+Resolution
+The permanent fix is to add an autoscaling alert at 70% queue utilization and review the worker maximum during the next capacity planning meeting.
+
+Resolution duplicate
+The permanent fix is to add an autoscaling alert at 70% queue utilization and review the worker maximum during the next capacity planning meeting.

@@ -1,0 +1,19 @@
+NORTHSTAR INDUSTRIES | Q3 2025 OPERATING REVIEW
+
+Executive summary
+Northstar Industries delivered a strong third quarter with revenue of $48.2 million, up 12.4% year over year. Adjusted operating margin expanded to 18.6% from 16.9% in the prior-year quarter. Management attributes the improvement to subscription renewals, disciplined hiring, and lower cloud infrastructure costs.
+
+Financial performance
+Subscription revenue was $35.7 million and represented 74% of total revenue. Services revenue was $12.5 million. Gross margin was 71.2%, compared with 68.4% in Q3 2024. Adjusted EBITDA reached $10.1 million, a 21% increase year over year. Free cash flow was $7.8 million, or 16.2% of revenue.
+
+Customer and product metrics
+The company ended the quarter with 1,842 active customers and added 126 net new customers. Net revenue retention was 113%. Monthly active users increased 19% to 214,000. The Atlas analytics release generated 38% of new expansion bookings during the quarter.
+
+Cost optimization
+Cloud infrastructure spend declined 9% sequentially after database right-sizing and storage lifecycle policies were deployed. Support cost per customer declined 6%. The company consolidated three internal reporting tools, reducing annual software commitments by approximately $420,000.
+
+Outlook and risks
+Management expects Q4 revenue between $49.5 million and $50.5 million and full-year revenue between $190 million and $192 million. Primary risks include longer enterprise procurement cycles, foreign exchange volatility, and increased competition in analytics. The company plans to prioritize retention, Atlas adoption, and cash generation over accelerated headcount growth.
+
+Selected benchmarks
+Q3 revenue: $48.2 million | Q3 adjusted EBITDA: $10.1 million | Gross margin: 71.2% | Net revenue retention: 113% | Active customers: 1,842 | Free cash flow: $7.8 million

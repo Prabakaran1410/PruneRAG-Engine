@@ -33,4 +33,7 @@ py -3 -m pytest
 locust -f tests/locustfile.py --host=http://localhost:8000
 ```
 
+For a complete validation procedure, see [docs/RUNBOOK.md](docs/RUNBOOK.md). Generate the included sample document with `py -3 scripts/create_sample_pdf.py`, then upload `sample_data/quarterly_report.pdf` in the dashboard.
+Additional scenario documents and expected results are listed in [docs/SAMPLE_SCENARIOS.md](docs/SAMPLE_SCENARIOS.md). The generator creates PDFs for every `.txt` file in `sample_data/`.
+
 Qdrant is included in `docker-compose.yml` for the next retrieval milestone. The current MVP uses an in-process hybrid fallback so development does not require Docker or a model download.

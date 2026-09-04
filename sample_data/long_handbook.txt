@@ -1,0 +1,34 @@
+FIELD OPERATIONS HANDBOOK | CONTEXT BUDGET TEST
+
+Purpose
+This handbook describes field support procedures, escalation paths, safety checks, and service standards for regional operations teams.
+
+Dispatch procedure
+Confirm the customer address, service tier, equipment serial number, and technician availability before dispatch. Record the dispatch identifier in the service console. Priority one incidents require a dispatch decision within fifteen minutes.
+
+Safety procedure
+Technicians must complete the electrical isolation checklist before opening equipment. Stop work when a damaged cable, exposed conductor, standing water, or unverified lockout is found. Escalate safety hazards to the regional safety lead immediately.
+
+Spare parts procedure
+Use the approved parts catalog and record lot numbers for all replaced components. If a part is unavailable, offer the approved equivalent only after engineering confirms compatibility. Return unused parts within ten business days.
+
+Customer communication
+Send an arrival window before travel, provide an update when the technician is delayed, and confirm restoration before closing the case. Never include internal diagnostic notes in customer-facing messages.
+
+Escalation procedure
+Escalate a priority one outage to the incident commander, service owner, and communications lead. Escalate repeated priority two failures after the third occurrence in thirty days. Include timestamps, affected sites, mitigation steps, and the next decision point.
+
+Quality review
+Supervisors review ten closed cases each week for complete timestamps, correct parts records, safety checklist completion, and customer confirmation. Findings are tracked in the weekly quality register.
+
+Training
+New technicians complete equipment orientation, shadow two field visits, and pass the safety assessment before independent work. Refresher training is required every twelve months.
+
+Regional planning
+Each region reviews seasonal demand, technician coverage, spare-part stock, and partner capacity before the start of a quarter. Capacity risks must have an owner and a dated mitigation plan.
+
+Service metrics
+Track first-time fix rate, arrival-window adherence, mean time to restore, repeat visit rate, safety exceptions, and customer confirmation rate. Metrics are reviewed every Monday by regional operations leadership.
+
+Appendix: escalation checklist
+Capture the incident identifier, impact statement, start time, current status, owner, customer message, mitigation, unresolved risk, and next update time. This checklist is required for every priority one incident.

@@ -21,6 +21,7 @@ class QueryResponse(BaseModel):
     answer: str
     sources: list[dict]
     metrics: dict
+    pipeline: dict
 
 
 def _answer(query: str, context: list[str]) -> str:
@@ -55,16 +56,34 @@ def health() -> dict:
 async def ingest(file: UploadFile = File(...)) -> dict:
     chunks = extract_pdf(await file.read(), file.filename or "upload.pdf")
     retriever.add(chunks)
-    return {"filename": file.filename, "chunks_indexed": len(chunks)}
+    return {
+        "filename": file.filename,
+        "chunks_indexed": len(chunks),
+        "pages_indexed": len({chunk.page for chunk in chunks}),
+        "estimated_tokens": estimate_tokens("\n".join(chunk.text for chunk in chunks)),
+    }
 
 
 @app.post("/api/v1/query", response_model=QueryResponse)
 def query(request: QueryRequest) -> QueryResponse:
     started = time.time()
-    hits = [hit for hit in retriever.search(request.query) if hit["score"] >= 0.65]
+    candidates = retriever.search(request.query)
+    hits = [hit for hit in candidates if hit["score"] >= 0.65]
     raw_context = [hit["text"] for hit in hits]
     context = prune_context(raw_context, max_tokens=request.max_context_tokens) if request.enable_pruning else raw_context
     answer = _answer(request.query, context)
     prompt = f"Question: {request.query}\nContext:\n{'\n'.join(context)}"
     metrics = calculate_rag_metrics(prompt, answer, estimate_tokens("\n".join(raw_context)), started)
-    return QueryResponse(answer=answer, sources=hits[:len(context)], metrics=metrics)
+    pipeline = {
+        "indexed_chunks": len(retriever.chunks),
+        "retrieved_candidates": len(candidates),
+        "threshold_passed": len(hits),
+        "context_chunks": len(context),
+        "tokens_before_pruning": estimate_tokens("\n".join(raw_context)),
+        "tokens_after_pruning": estimate_tokens("\n".join(context)),
+        "relevance_threshold": 0.65,
+        "duplicate_similarity_threshold": 0.88,
+        "max_context_tokens": request.max_context_tokens,
+        "pruning_enabled": request.enable_pruning,
+    }
+    return QueryResponse(answer=answer, sources=hits[:len(context)], metrics=metrics, pipeline=pipeline)

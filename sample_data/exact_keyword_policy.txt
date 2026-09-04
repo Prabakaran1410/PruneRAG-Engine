@@ -1,0 +1,13 @@
+ACME CLOUD SECURITY POLICY | CONTROL REGISTER
+
+Control ACME-IAM-042
+Privileged access must use phishing-resistant multi-factor authentication. The control owner is Identity Engineering. Evidence must be retained for 365 days. Exceptions require approval from the Chief Information Security Officer.
+
+Control ACME-LOG-117
+Audit logs for production systems must be immutable, time-synchronized, and retained for 400 days. The logging owner is Security Operations. The exact control identifier is ACME-LOG-117.
+
+Control ACME-BCP-009
+Critical services must have a recovery time objective of four hours and a recovery point objective of one hour. The continuity owner is Site Reliability Engineering.
+
+Audit lookup examples
+Search terms include ACME-IAM-042, ACME-LOG-117, phishing-resistant MFA, immutable logs, 365-day evidence retention, and four-hour recovery time objective.
